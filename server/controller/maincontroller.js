@@ -7,8 +7,7 @@ exports.homepage = async (req,res) =>{
             title:"Nodejs Notes",
             description: "free NodeJs Notes App"
         }
-        res.render('index',locals);
-    
+        res.render('index', locals);  
 };
 /**
  * GET/
