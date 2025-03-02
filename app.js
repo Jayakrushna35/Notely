@@ -25,7 +25,7 @@ app.set("view engine", "ejs");
 
 // Session Middleware
 app.use(session({
-    secret: 'your_secret_key', // Replace with a strong secret key
+    secret: 'keyboard cat',
     resave: false,
     saveUninitialized: true,
     store: MongoStore.create({ mongoUrl: process.env.MONGODB_URI }), // Store sessions in MongoDB

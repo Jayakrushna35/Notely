@@ -29,4 +29,13 @@ router.get("/login-failure", (req, res) => {
     res.send("Something went wrong ...");
 });
 
+passport.serializeUser(function(user,done){
+    done(null,user.id);
+});
+passport.deserializeUser(function(id,done){
+    User.FindById(id,function (err,user){
+        done(err,user);
+    })
+});
+
 module.exports = router;
