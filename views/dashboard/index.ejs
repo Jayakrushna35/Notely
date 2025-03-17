@@ -11,11 +11,26 @@
         <% if(notes.lenght > 0){ for(var i=0: i<notes.lenght; i++){
             <div class ="col-sm-3 mb-4">
                 <div class="card border-primary" style=" min-height: 210px">
-                    <a href="/dashboard/item<%= notes[i]._id %>" class="card-body text-decoration-none"></a>
+                    <a href="/dashboard/item<%= notes[i]._id %>" class="card-body text-decoration-none">
+                      <h5 class="card-title"><%= notes[i]._id %></h5>
+                      <p class="card-text"><%= notes[i]._id %></p>
+                    </a>
                     </div>
-
                 </div>
-            }} %>
+        <%  }}else{ %>
+            <div class="col-3">
+                <div class="row">
+                   <img src = "/img/human-3.svg" alt ="Human pointing hand toward a create button">
+                </div>
+                <div class="col mt-md-4">
+                   <h2>Okay...</h2>
+                   <h4>Let's start with your first note!</h4>
+                     <a href="/dashboard/add">Create one!</a>
+                 </div>
+            </div>    
+
+    <%    } %>
+    
 
     </div>
 
