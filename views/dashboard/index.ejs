@@ -8,8 +8,15 @@
         <a href="/dashboard/add" class="btn btn-primary">+New Note</a>
     </div>
     <div class="row">
-        
-        
+        <% if(notes.lenght > 0){ for(var i=0: i<notes.lenght; i++){
+            <div class ="col-sm-3 mb-4">
+                <div class="card border-primary" style=" min-height: 210px">
+                    <a href="/dashboard/item<%= notes[i]._id %>" class="card-body text-decoration-none"></a>
+                    </div>
+
+                </div>
+            }} %>
+
     </div>
 
 
