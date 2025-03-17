@@ -29,7 +29,7 @@ app.use(session({
     resave: false,
     saveUninitialized: true,
     store: MongoStore.create({ mongoUrl: process.env.MONGODB_URI }), // Store sessions in MongoDB
-    cookie: { maxAge: 3600000 } // Set to true if using HTTPS
+    cookie: {maxAge: (Date.now() +3600000) } // Set to true if using HTTPS
 }));
 
 // Initialize Passport
